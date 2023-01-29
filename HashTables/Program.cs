@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 
 namespace DataStructure_HashTables
 {
@@ -40,7 +41,11 @@ namespace DataStructure_HashTables
                     hashtable.Add(word.ToLower(), 1);
                 }
             }
-            Console.WriteLine("The frequency of words will be:");
+            Console.WriteLine("Displaying after add operation");
+            hashtable.Display();
+            //UC3 Removing avoidable word from the phrase
+            hashtable.Remove("avoidable");
+            Console.WriteLine("------------------------------------");
             hashtable.Display();
         }
     }
