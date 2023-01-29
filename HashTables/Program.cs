@@ -9,7 +9,7 @@ namespace DataStructure_HashTables
         {
             Console.WriteLine("Welcome to the Hash Table Programs");
             Console.WriteLine("Please choose below option want to execute");
-            Console.WriteLine("1.Frequency of Sentence\n2.Frequency of paragraph");
+            Console.WriteLine("1.Frequency of Sentence\n2.Frequency of paragraph\n3.BST Adding Node");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -20,6 +20,13 @@ namespace DataStructure_HashTables
                 case 2:
                     string para = "Paranoids are not paranoid because they are paranoid but because they keep putting themselves deliberately into paranoid avoidable situations";
                     CountNumbOfOccurence(para);
+                    break;
+                case 3:
+                    Console.WriteLine("Welcome to the binary Search tree");
+                    BinarySearchTree<int> binarySearchTree = new BinarySearchTree<int>(56);
+                    binarySearchTree.Insert(30);
+                    binarySearchTree.Insert(70);
+                    binarySearchTree.Display();
                     break;
             }
             Console.ReadLine();
