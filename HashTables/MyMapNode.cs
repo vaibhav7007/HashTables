@@ -14,6 +14,7 @@ namespace DataStructure_HashTables
         {
             public k Key { get; set; }
             public v Value { get; set; }
+
         }
         private readonly int size;
 
