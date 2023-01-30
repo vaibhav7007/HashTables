@@ -55,5 +55,32 @@ namespace DataStructure_HashTables
         {
             Console.WriteLine("Size" + " " + (1 + this.leftCount + this.rightCount));
         }
+
+        bool result = false;
+        public bool IfExists(T element, BinarySearchTree<T> node)  //For Searching node in Binary Search Tree
+        {
+            if (node == null)
+            {
+                return false;
+            }
+            if (node.NodeData.Equals(element))
+            {
+                Console.WriteLine("Found the element in binary search tree" + " " + node.NodeData);
+                result = true;
+            }
+            else
+            {
+                Console.WriteLine("Current element is {0} in binary search tree", node.NodeData);
+            }
+            if (element.CompareTo(node.NodeData) < 0)
+            {
+                IfExists(element, node.LeftTree);
+            }
+            if (element.CompareTo(node.NodeData) > 0)
+            {
+                IfExists(element, node.RightTree);
+            }
+            return result;
+        }
     }
 }

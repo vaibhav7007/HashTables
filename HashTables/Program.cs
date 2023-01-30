@@ -9,7 +9,7 @@ namespace DataStructure_HashTables
         {
             Console.WriteLine("Welcome to the Hash Table Programs");
             Console.WriteLine("Please choose below option want to execute");
-            Console.WriteLine("1.Frequency of Sentence\n2.Frequency of paragraph\n3.BST Adding Node\n4.BST Adding All Nodes");
+            Console.WriteLine("1.Frequency of Sentence\n2.Frequency of paragraph\n3.BST Adding Node\n4.BST Adding All Nodes\n5.BST Searching Node");
             int option = Convert.ToInt32(Console.ReadLine());
             BinarySearchTree<int> binarySearchTree = new BinarySearchTree<int>(56);
             switch (option)
@@ -44,6 +44,25 @@ namespace DataStructure_HashTables
                     binarySearchTree.Insert(67);
                     binarySearchTree.Display();
                     binarySearchTree.GetSize();
+                    break;
+                case 5:
+                    Console.WriteLine("Welcome to the binary Search tree");
+                    binarySearchTree.Insert(30);
+                    binarySearchTree.Insert(70);
+                    binarySearchTree.Insert(22);
+                    binarySearchTree.Insert(40);
+                    binarySearchTree.Insert(60);
+                    binarySearchTree.Insert(95);
+                    binarySearchTree.Insert(11);
+                    binarySearchTree.Insert(65);
+                    binarySearchTree.Insert(3);
+                    binarySearchTree.Insert(16);
+                    binarySearchTree.Insert(63);
+                    binarySearchTree.Insert(67);
+                    binarySearchTree.Display();
+                    binarySearchTree.GetSize();
+                    bool result = binarySearchTree.IfExists(63, binarySearchTree);
+                    Console.WriteLine(result);
                     break;
             }
             Console.ReadLine();
